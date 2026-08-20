@@ -13,6 +13,23 @@
 - Named `COMPONENT.md` (uppercase, to distinguish from human-oriented `.md` files).
 - A component is defined as "a unit of code with a public interface that other components depend on" — typically a class, a module, or a small cohesive group of files.
 
+Try to make the definition of a component as small as possible.
+
+Why? For example, if you define a component as an entire microservice, and you change a function inside that microservice, that function may be connected to several other functions. The AI may not know that those relationships exist because the "COMPONENT.md" file is defined at the microservice level rather than at the function level. As a result, it will not be able to test the change properly.
+
+So, as much as possible, make the definition of a component as small and precise as possible. This allows the AI to identify and test all the relevant relationships whenever a change is made, and therefore verify whether the change actually works without breaking anything else.
+
+You also should not worry too much about having a large number of component files or about the fact that a smaller component may have many connected components. That is not a problem because the AI does not need to know the code of every component connected to the component it is modifying.
+
+It only needs to know the code of the component it is actually modifying.
+
+The other components connected to it can be treated as black boxes. The AI does not need to understand their internal implementation. It only needs to send them specific test cases and wait for the expected results.
+
+So, literally, what needs to be present in the AI's context window is the loop described in the README , component.md , the code of the component it is currently modifying, and the saved path or copy of that component's code from before the modification.
+
+This keeps the amount of code the AI needs to understand small, while still allowing it to verify the impact of its changes across the connected components.
+
+
 ## 3. Required fields
 
 Every `COMPONENT.md` MUST contain the following fields, in this order:
