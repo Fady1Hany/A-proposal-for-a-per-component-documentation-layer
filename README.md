@@ -21,7 +21,7 @@ For every important component in a codebase, co-locate a small, structured docum
 The goal is not to replace source inspection. It is to give the agent a high-level navigation and impact map *first*, so it can identify the relevant slice of the codebase before spending context on the implementation.
 
 
-the software engineer ask ai to edit or maintenance  Component X Before ai even go to Component X to modify it, ai first need to know which COMPONENTS ai are going to check after modifying it.
+the software engineer asks ai to edit or maintenain  Component X Before ai even go to Component X to modify it, ai first need to know which COMPONENTS ai are going to check after modifying it.
 
 This is the role of "COMPONENT X.md". 
 
@@ -31,21 +31,56 @@ And there is one important point: before modifying Component X, the AI must save
 
 It needs to do this because if the modification breaks one of the connected services, the AI can restore the original Component X file and try a different implementation of the user's requested change.
 
+**agent.md :**
+
+Component Change Rule
+
+This rule applies dynamically to any component. Do not assume or hard-code specific component names. The target component must be determined from the user's requested change
+
+For any change to a component — including editing, maintenance, refactoring, bug fixing, or any other modification — do not start by reading or modifying the component's source code.
+
+First, identify the component that the requested change targets.
+
+Then:
+
+1. Locate the documentation file for that component using the following naming convention:"COMPONENT_NAME.md" ( NAME = the actual name of the a component they user asks to change it's code )
+
+2. Read the COMPONENT_NAME.md file before inspecting or modifying its source code.
+
+3. Follow the change and maintenance workflow defined in that documentation file.
+
+4. Use the information in the documentation to understand:
+   
+   - where the component is located,
+   - what the component affects,
+   - what affects the component,
+   - and any required verification or testing steps.
+
+5. Follow the loop For any change to a component.
+
 So the process becomes a loop:
 
-1. Read "COMPONENT X.md" for Component X.
-2. Identify all the COMPONENTs that need to be verified after modifying Component X.
-3. Save a copy of the original Component X code.
-4. Modify Component X according to the user's request — for example, adding a new message or changing its behavior.
+1. Read "COMPONENT_NAME.md" for COMPONENT_NAME.
+   
+2. Identify all the COMPONENTs that need to be verified after modifying COMPONENT_NAME.
+   
+3. Save a copy of the original COMPONENT_NAME code from it's path ( which is documented in COMPONENT_ NAME.md )
+   
+4. Modify COMPONENT_NAME according to the user's request — for example, adding a new message or changing its behavior.
+  
 5. Test ( unit test, an integration test, or even an end-to-end (E2E) test.. )
-6. Continue through the tests listed in "COMPONENT X.md".
-7. If one of the tests fails, restore the saved original Component X code. Modify Component X again using a different approach.
-9. Run the verification tests again.
-10. Repeat this loop until the user's requested change is achieved without affecting any of the connected Components.
+  
+6. Continue through the tests listed in "COMPONENT_NAME.md".
+  
+7. If one of the tests fails, restore the saved original COMPONENT_NAME code. Modify COMPONENT_NAME again using a different approach.
+   
+8. Run the verification tests again.
 
-The important idea is that the AI does not need to keep every previous modification in its memory. It only needs the original saved version of COMPONENT X and the "COMPONENT X.md" file that tells it what to verify.
+9. Repeat this loop until the user's requested change is achieved without affecting any of the connected Components.
 
-The AI can therefore iterate repeatedly — even if it tries the same approach many times ( or you can avoid that by save the approaches outside of the context widow for example in database and just query if the current approach was already saved in the database )— until it finds an implementation that satisfies the user's request while keeping all affected services working correctly.   
+The important idea is that the AI does not need to keep every previous modification in its memory. It only needs the original saved version of COMPONENT_NAME and the "COMPONENT_NAME.md" file that tells it what to verify.
+
+The AI can therefore iterate repeatedly — even if it tries the same approach many times ( or you can avoid that by saving the approaches outside of the context window for example in database and just query if the current approach was already saved in the database )— until it finds an implementation that satisfies the user's request while keeping all affected services working correctly.   
 
 ## What makes this different from existing things
 
