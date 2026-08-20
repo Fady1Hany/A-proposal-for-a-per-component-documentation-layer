@@ -2,7 +2,11 @@
 
 ## The asymmetry between human and AI developers
 
-A human developer who has worked on a codebase for any length of time carries a large amount of implicit knowledge: where the important components live, which parts call which, which tests cover what, and which changes are likely to ripple. When asked to modify a component, they often already know where it is and what it touches — or they can navigate there in a few keystrokes.
+A human developer who has worked on a codebase for any length of time carries a large amount of implicit knowledge: where the important components live, which parts call which, which tests cover what, and which changes are likely to ripple. When asked to modify a component, they often already know where it is and what it touches .
+*but if they don't know** :
+they can navigate there in a few keystrokes. or read the documentations but the problem is that The documentations that exist right now are made for humans And that's exactly what this repo is tackling: how to create documentation for each component that's suitable for the agency, not for humans.
+
+Because without a component-level documentation that is made exclusively for ai, an AI may still be able to navigate the codebase and discover the necessary information, or read the existing documentation. However, doing so pushes the task beyond the practical constraints of even the most capable AI models available today, requiring them to spend significant context and reasoning capacity reconstructing information that could have been provided explicitly.
 
 This is not because humans have larger working memory than AI agents. It is because humans build a **persistent mental model** that survives across interactions. They can selectively recall the parts that matter without reloading the whole project.
 
