@@ -21,15 +21,15 @@ For every important component in a codebase, co-locate a small, structured docum
 The goal is not to replace source inspection. It is to give the agent a high-level navigation and impact map *first*, so it can identify the relevant slice of the codebase before spending context on the implementation.
 
 
-the software engineer asks ai to edit or maintenain  Component X Before ai even go to Component X to modify it, ai first need to know which COMPONENTS ai are going to check after modifying it.
+the software engineer asks ai to edit or maintenain COMPONENT_NAME Before ai even go to COMPONENT_NAME to modify it, ai first need to know which COMPONENTS ai are going to check after modifying it.
 
-This is the role of "COMPONENT X.md". 
+This is the role of "COMPONENT_NAME.md". 
 
-"COMPONENT X.md" gives the AI its to-do list: after modifying Component X, exactly what does it need to do? Which COMPONENTS does it need to go through? Which test cases does it need to run?
+"COMPONENT_NAME.md" gives the AI its to-do list: after modifying COMPONENT_NAME, exactly what does it need to do? Which COMPONENTS does it need to go through? Which test cases does it need to run?
 
-And there is one important point: before modifying Component X, the AI must save a copy of the original Component X file.
+And there is one important point: before modifying COMPONENT_NAME, the AI must save a copy of the original COMPONENT_NAME source code file.
 
-It needs to do this because if the modification breaks one of the connected services, the AI can restore the original Component X file and try a different implementation of the user's requested change.
+It needs to do this because if the modification breaks one of the connected components, the AI can restore the original COMPONENT_NAME source code file and try a different implementation of the user's requested change.
 
 **agent.md :**
 
@@ -72,7 +72,7 @@ So the process becomes a loop:
   
 6. Continue through the tests listed in "COMPONENT_NAME.md".
   
-7. If one of the tests fails, restore the saved original COMPONENT_NAME code. Modify COMPONENT_NAME again using a different approach.
+7. If one of the tests fails, restore the saved original COMPONENT_NAME sorce code. Modify COMPONENT_NAME again using a different approach.
    
 8. Run the verification tests again.
 
