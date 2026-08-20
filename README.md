@@ -78,6 +78,8 @@ So the process becomes a loop:
 
 9. Repeat this loop until the user's requested change is achieved without affecting any of the connected Components.
 
+___
+
 The important idea is that the AI does not need to keep every previous modification in its memory. It only needs the original saved version of COMPONENT_NAME and the "COMPONENT_NAME.md" file that tells it what to verify.
 
 The AI can therefore iterate repeatedly — even if it tries the same approach many times ( or you can avoid that by saving the approaches outside of the context window for example in database and just query if the current approach was already saved in the database )— until it finds an implementation that satisfies the user's request while keeping all affected services working correctly.   
