@@ -20,6 +20,33 @@ For every important component in a codebase, co-locate a small, structured docum
 
 The goal is not to replace source inspection. It is to give the agent a high-level navigation and impact map *first*, so it can identify the relevant slice of the codebase before spending context on the implementation.
 
+
+the software engineer ask ai to edit or maintenance  Component X Before ai even go to Component X to modify it, ai first need to know which COMPONENTS ai are going to check after modifying it.
+
+This is the role of "COMPONENT X.md". 
+
+"COMPONENT X.md" gives the AI its to-do list: after modifying Component X, exactly what does it need to do? Which COMPONENTS does it need to go through? Which test cases does it need to run?
+
+And there is one important point: before modifying Component X, the AI must save a copy of the original Component X file.
+
+It needs to do this because if the modification breaks one of the connected services, the AI can restore the original Component X file and try a different implementation of the user's requested change.
+
+So the process becomes a loop:
+
+1. Read "COMPONENT X.md" for Component X.
+2. Identify all the COMPONENTs that need to be verified after modifying Component X.
+3. Save a copy of the original Component X code.
+4. Modify Component X according to the user's request — for example, adding a new message or changing its behavior.
+5. Test the next connected service.
+6. Continue through the Components listed in "COMPONENT X.md".
+7. If one of the tests fails, restore the saved original Component X code. Modify Component X again using a different approach.
+9. Run the verification tests again.
+10. Repeat this loop until the user's requested change is achieved without affecting any of the connected Components.
+
+The important idea is that the AI does not need to keep every previous modification in its memory. It only needs the original saved version of COMPONENT X and the "COMPONENT X.md" file that tells it what to verify.
+
+The AI can therefore iterate repeatedly — even if it tries the same approach many times ( or you can avoid that by save the approaches outside of the context widow for example in database and just query if the current approach was already saved this database )— until it finds an implementation that satisfies the user's request while keeping all affected services working correctly.   
+
 ## What makes this different from existing things
 
 This is not AGENTS.md (one file per repo, behavioral rules). It is not a code-graph MCP server (auto-generated, queried at runtime). It is not an ADR (per-decision, not per-component).
