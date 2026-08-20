@@ -37,8 +37,8 @@ So the process becomes a loop:
 2. Identify all the COMPONENTs that need to be verified after modifying Component X.
 3. Save a copy of the original Component X code.
 4. Modify Component X according to the user's request — for example, adding a new message or changing its behavior.
-5. Test the next connected service.
-6. Continue through the Components listed in "COMPONENT X.md".
+5. Test ( unit test, an integration test, or even an end-to-end (E2E) test.. )
+6. Continue through the tests listed in "COMPONENT X.md".
 7. If one of the tests fails, restore the saved original Component X code. Modify Component X again using a different approach.
 9. Run the verification tests again.
 10. Repeat this loop until the user's requested change is achieved without affecting any of the connected Components.
