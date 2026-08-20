@@ -7,7 +7,8 @@ The four pieces of this proposal all exist in some form. The specific combinatio
 ### AGENTS.md (2025)
 - **What it is:** A markdown file at the repo root giving AI coding agents project-wide instructions, conventions, and behavioral rules. Vendor-neutral, supported by Codex, Cursor, Claude Code, etc.
 - **Overlap:** Same broad goal — give the agent context it cannot derive from code alone.
-- **Key difference:** AGENTS.md is **one file per repo**, focused on behavioral rules. This proposal is **one file per component**, focused on navigation and impact.
+- **Key difference:** AGENTS.md is **one file per repo**, focused on behavioral rules. This proposal is **one file per component**, focused on navigation and impact. and AGENTS.md is used as the orchestration layer for component-aware agent workflows. It does not describe the project or encode its architecture. Instead, it instructs the agent on how to navigate and use the component documentation: identify the relevant COMPONENT.md, read it before making changes, follow its change-impact and verification guidance, and use the documented workflow when modifying the component. The project-specific knowledge remains in the component documentation, while AGENTS.md defines the agent's behavior for consuming that knowledge.
+  
 - **Caveat:** The arXiv paper *"Evaluating AGENTS.md"* (Feb 2026) found that context files can *reduce* task success rates compared to no context. This is a warning about design, not a verdict on the concept — but it is the strongest cautionary data point we have.
 
 ### `.cursorrules`, `.windsurfrules`
