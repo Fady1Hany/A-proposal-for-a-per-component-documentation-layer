@@ -31,7 +31,7 @@ And there is one important point: before modifying COMPONENT_NAME, the AI must s
 
 It needs to do this because if the modification breaks one of the connected components, the AI can restore the original COMPONENT_NAME source code file and try a different implementation of the user's requested change.
 
-**agent.md :**
+**AGENTS.md :**
 
 Component Change Rule
 
