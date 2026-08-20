@@ -1,6 +1,7 @@
 # AI-Oriented Component Documentation
 
-> A proposal for a per-component documentation layer designed around the context-window constraint of AI coding agents.
+> A proposal for a per-component documentation layer designed around the context-window constraint of AI coding agents.AI was used as a research and writing assistant in developing this proposal. The underlying idea, core concepts, and direction of the proposal are my own.
+
 
 ## The problem
 
@@ -40,6 +41,7 @@ See [`COMPARISON.md`](./COMPARISON.md) for the full landscape.
 | [`examples/TEMPLATE.component.md`](./examples/TEMPLATE.component.md) | A blank template to copy |
 | [`schema/component.schema.json`](./schema/component.schema.json) | JSON Schema for the format |
 | [`CONTRIBUTING.md`](./CONTRIBUTING.md) | How to contribute / discuss |
+| [`tools`](./tools) | all tools that are created to auto-generate the fields that can be auto generated will live under (./tools)|
 
 ## Status
 
