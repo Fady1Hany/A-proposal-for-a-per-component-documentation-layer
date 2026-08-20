@@ -94,7 +94,6 @@ An AI agent reading a `COMPONENT.md` SHOULD:
 - A specific generator implementation. Any tool that emits the required fields in the right format is fine.
 - A specific language. The format is language-agnostic; generators will be language-specific.
 - A specific test framework. `targeted_verification` is just a list of identifiers.
-- Behavioral rules for the agent. That belongs in `AGENTS.md`, not here.
 
 ## 9. Versioning
 
