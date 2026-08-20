@@ -23,7 +23,7 @@ You also should not worry too much about having a large number of component file
 
 It only needs to know the code of the component it is actually modifying.
 
-The other components connected to it can be treated as black boxes. The AI does not need to understand their internal implementation. It only needs to send them specific test cases and wait for the expected results.
+The other components connected to it can be treated as black boxes. The AI does not need to understand their internal implementation. It only needs to run tests and wait for the expected results.
 
 So, literally, what needs to be present in the AI's context window is the loop described in the README , component.md , the code of the component it is currently modifying, and the saved path or copy of that component's code from before the modification.
 
