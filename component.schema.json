@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/<owner>/ai-component-docs/schema/component.schema.json",
+  "title": "COMPONENT.md",
+  "description": "Schema for the structured representation of a COMPONENT.md file. The on-disk format is Markdown; this schema is for tooling that parses it into structured form.",
+  "type": "object",
+  "required": ["component", "location", "verified_against", "depends_on", "used_by", "change_impact", "targeted_verification"],
+  "properties": {
+    "component": {
+      "type": "string",
+      "description": "The component's name as it appears in code."
+    },
+    "location": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "File path(s) relative to repo root. Auto-generated.",
+      "minItems": 1
+    },
+    "verified_against": {
+      "type": "object",
+      "description": "The git commit at which the authored fields were last verified accurate.",
+      "required": ["commit", "date"],
+      "properties": {
+        "commit": { "type": "string", "pattern": "^[0-9a-f]{7,40}$" },
+        "date": { "type": "string", "format": "date" }
+      }
+    },
+    "depends_on": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "location"],
+        "properties": {
+          "name": { "type": "string" },
+          "location": { "type": "string" }
+        }
+      },
+      "description": "Components this component calls or imports. Auto-generated."
+    },
+    "used_by": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "location"],
+        "properties": {
+          "name": { "type": "string" },
+          "location": { "type": "string" }
+        }
+      },
+      "description": "Components that call or import this component. Auto-generated."
+    },
+    "change_impact": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Authored. What kinds of changes affect which downstream components, and how."
+    },
+    "targeted_verification": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Authored. Specific tests or checks to run after modifying this component.",
+      "minItems": 0
+    },
+    "public_interface": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Optional. Explicit list of exported symbols considered stable."
+    },
+    "stability": {
+      "type": "string",
+      "enum": ["experimental", "stable", "frozen", "deprecated"],
+      "description": "Optional. Stability level of the component."
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Optional. Free-form authored context. Use sparingly."
+    }
+  }
+}
