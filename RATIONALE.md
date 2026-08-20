@@ -37,6 +37,6 @@ Everything in the spec follows from this. The four fields (Location, Relationshi
 
 ## Why now
 
-The shift from "AI as autocomplete" to "AI as agent that edits across multiple files" is what makes this worth proposing. When an agent only completed the next line, it did not need an impact map. When an agent modifies a service and is expected to update its consumers and run the right tests, the absence of an impact map becomes the dominant failure mode.
+The shift from "AI as autocomplete **( code generator )**" to "AI as agent that edits across multiple files **( can maintain a large codebase )**" is what makes this worth proposing. When an agent only completed the next line, it did not need an impact map. When an agent modifies a service and is expected to update its consumers and run the right tests, the absence of an impact map becomes the dominant failure mode.
 
 The arXiv paper *"Evaluating AGENTS.md"* (Feb 2026) found that repository-level context files can *reduce* task success rates — which is a warning that **design matters more than existence**. This proposal takes that warning seriously: the format is small, co-located, freshness-stamped, and split between auto-generated and authored fields to minimize drift.
