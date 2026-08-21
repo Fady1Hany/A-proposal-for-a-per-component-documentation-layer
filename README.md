@@ -33,7 +33,7 @@ It needs to do this because if the modification breaks one of the connected comp
 
 And then you need **an orchestration layer** which will tell the ai how to deal with **COMPONENT_NAME.md** .. what the workflow is .. what the end goal is
 
-**AGENTS.md ( or cloude worked flow ) can be used as an orchestration layer**
+**AGENTS.md ( or claude code workeflow ) can be used as an orchestration layer**
 
 in the case of using **AGENTS.md** as an orchestration layer it will be like this 
 
