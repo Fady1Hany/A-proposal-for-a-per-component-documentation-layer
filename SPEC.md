@@ -25,7 +25,7 @@ It only needs to know the code of the component it is actually modifying.
 
 The other components connected to it can be treated as black boxes. The AI does not need to understand their internal implementation. It only needs to run tests and wait for the expected results.
 
-So, literally, what needs to be present in the AI's context window is AGENTS.md ( which contains many instructions one of them is the loop which is described in [Readme](https://github.com/Fady1Hany/A-proposal-for-a-per-component-documentation-layer/blob/main/README.md) ) , COMPONENT_NAME.md , the code of the component it is currently modifying, and the saved path or copy of that component's code from before the modification.
+For example if you use **AGENTS.md** as a orchestration layer what needs to be present in the AI's context window is AGENTS.md ( which contains many instructions one of them is the loop which is described in [Readme](https://github.com/Fady1Hany/A-proposal-for-a-per-component-documentation-layer/blob/main/README.md) ) , COMPONENT_NAME.md , the code of the component it is currently modifying, and the saved path or copy of that component's code from before the modification.
 
 This keeps the amount of code the AI needs to understand small, while still allowing it to verify the impact of its changes across the connected components.
 
