@@ -25,7 +25,7 @@ the software engineer asks ai to edit or maintenain COMPONENT_NAME Before ai eve
 
 This is the role of "COMPONENT_NAME.md". 
 
-"COMPONENT_NAME.md" gives the AI a list: after modifying COMPONENT_NAME, Which COMPONENTS does it need to go through? Which test cases does it need to run?
+"COMPONENT_NAME.md" gives the AI a list: where is this Component ? , after modifying COMPONENT_NAME, Which COMPONENTS does it need to go through? Which test cases does it need to run?
 
 And there is one important point: before modifying COMPONENT_NAME, the AI must save a copy of the original COMPONENT_NAME source code file.
 
@@ -49,7 +49,7 @@ First, identify the component that the requested change targets.
 
 Then:
 
-1. Locate the documentation file for that component using the following naming convention:"COMPONENT_NAME.md" ( NAME = the actual name of the a component they user asks to change it's code )
+1. Locate the documentation file for that component using the following naming convention:"COMPONENT_NAME.md" ( NAME = the actual name of the a component the user asks to change it's code )
 
 2. Read the COMPONENT_NAME.md file before inspecting or modifying its source code.
 
