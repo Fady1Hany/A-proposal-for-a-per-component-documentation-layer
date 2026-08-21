@@ -25,11 +25,17 @@ the software engineer asks ai to edit or maintenain COMPONENT_NAME Before ai eve
 
 This is the role of "COMPONENT_NAME.md". 
 
-"COMPONENT_NAME.md" gives the AI its to-do list: after modifying COMPONENT_NAME, exactly what does it need to do? Which COMPONENTS does it need to go through? Which test cases does it need to run?
+"COMPONENT_NAME.md" gives the AI a list: after modifying COMPONENT_NAME, Which COMPONENTS does it need to go through? Which test cases does it need to run?
 
 And there is one important point: before modifying COMPONENT_NAME, the AI must save a copy of the original COMPONENT_NAME source code file.
 
 It needs to do this because if the modification breaks one of the connected components, the AI can restore the original COMPONENT_NAME source code file and try a different implementation of the user's requested change.
+
+And then you need **an orchestration layer** which will tell the ai how to deal with **COMPONENT_NAME.md** .. what the workflow is .. what the end goal is
+
+**AGENTS.md ( or cloude worked flow ) can be used as an orchestration layer**
+
+in the case of using **AGENTS.md** as an orchestration layer it will be like this 
 
 **AGENTS.md :**
 
