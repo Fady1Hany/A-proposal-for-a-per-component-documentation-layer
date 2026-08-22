@@ -1,4 +1,4 @@
-# SPEC: `COMPONENT.md`
+# SPEC: `COMPONENT_NAME.md`
 
 > Status: draft v0.1 — open for discussion
 
