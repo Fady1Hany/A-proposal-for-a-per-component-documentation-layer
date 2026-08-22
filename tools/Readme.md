@@ -13,7 +13,7 @@ A tool that, given a codebase, emits the auto-generated fields (`location`, `dep
 
 ## Linter
 
-A tool that validates a `COMPONENT_NAME.md` against [`schema/component.schema.json`](../schema/component.schema.json) and the maintenance rules in [`SPEC.md`](../SPEC.md) §6.
+A tool that validates a `COMPONENT_NAME.md` against [`schema/COMPONENT_NAME.schema.json`](../schema/COMPONENT_NAME.schema.json) and the maintenance rules in [`SPEC.md`](../SPEC.md) §6.
 
 Checks:
 - All required fields present.
