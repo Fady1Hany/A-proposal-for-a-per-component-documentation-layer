@@ -7,7 +7,7 @@
   by a generator tool, not by hand.
 -->
 
-# COMPONENT_TEMPLATE: <ComponentName>
+# COMPONENT_TEMPLATE: 
 
 ## location
 <!-- [auto] -->
