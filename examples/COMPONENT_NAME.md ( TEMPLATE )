@@ -6,7 +6,7 @@
   fields should be filled by a generator tool, not by hand.
 -->
 
-# Component: <ComponentName>
+# COMPONENT_NAME: <ComponentName>
 
 ## location
 <!-- [auto] -->
