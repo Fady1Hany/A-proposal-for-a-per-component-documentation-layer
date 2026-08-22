@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/<owner>/ai-component-docs/schema/component.schema.json",
-  "title": "COMPONENT.md",
-  "description": "Schema for the structured representation of a COMPONENT.md file. The on-disk format is Markdown; this schema is for tooling that parses it into structured form.",
+  "$id": "https://github.com/<owner>/ai-component-docs/schema/COMPONENT_NAME.schema.json",
+  "title": "COMPONENT_NAME.md",
+  "description": "Schema for the structured representation of a COMPONENT_NAME.md file. The on-disk format is Markdown; this schema is for tooling that parses it into structured form.",
   "type": "object",
   "required": ["component", "location", "verified_against", "depends_on", "used_by", "change_impact", "targeted_verification"],
   "properties": {
