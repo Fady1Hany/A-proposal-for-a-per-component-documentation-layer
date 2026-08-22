@@ -114,7 +114,7 @@ See [`COMPARISON.md`](./COMPARISON.md) for the full landscape.
 | [`ESTIMATES.md`](./ESTIMATES.md) | Realistic estimates of where this helps, with confidence levels |
 | [`SOURCES.md`](./SOURCES.md) | Honest audit of the evidence base — what's verified, what's vendor-cited, what's reasoning |
 | [`examples/COMPONENT_authentication_service.md`](./examples/COMPONENT_authentication_service.md) | A worked example |
-| [`examples/COMPONENT_NAME.md`](./examples/COMPONENT_NAME.md) | A blank template to copy |
+| [`examples/COMPONENT_TEMPLATE.md`](./examples/COMPONENT_TEMPLATE.md) | A blank template to copy |
 | [`schema/COMPONENT_NAME.schema.json`](./schema/COMPONENT_NAME.schema.json) | JSON Schema for the format |
 | [`CONTRIBUTING.md`](./CONTRIBUTING.md) | How to contribute / discuss |
 | [`tools`](./tools) | all tools that are created to auto-generate the fields that can be auto generated will live under (./tools)|
