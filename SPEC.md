@@ -2,6 +2,8 @@
 
 > Status: draft v0.1 — open for discussion
 
+## When a user requests a change or maintenance to a component, the prompt must use the exact name defined in the corresponding `COMPONENT_NAME.md` file. The AI will take the provided name and use it as `COMPONENT_NAME.md`, so the name in the prompt must match the component's existing name exactly.
+
 ## 1. Purpose
 
 `COMPONENT.md` is a small, structured documentation file co-located with a source component, designed to be read by AI coding agents. It gives the agent the minimum information it needs to navigate, predict impact, and verify changes for that component — without reading the whole codebase.
