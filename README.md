@@ -25,7 +25,9 @@ the software engineer asks ai to edit or maintenain COMPONENT_NAME Before ai eve
 
 ## ( _NAME must be unique for each COMPONENT to prevent duplication in COMPONENT_NAME.md files. )
 
-## ( COMPONENT_NAME = the souce file of he COMPONENT and COMPONENT_NAME.md = the md file of the COMPONENT )
+## ( When a user requests a change or maintenance to a component, the prompt must use the exact name defined in the corresponding `COMPONENT_NAME.md` file. The AI will take the provided name and use it as `COMPONENT_NAME.md`, so the name in the prompt must match the component's existing name exactly. )
+
+## ( COMPONENT_NAME =  the component's primary source file. May include multiple files if the component spans them. )
 
 This is the role of "COMPONENT_NAME.md". 
 
