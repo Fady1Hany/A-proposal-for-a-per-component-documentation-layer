@@ -1,5 +1,5 @@
 <!--
-  COMPONENT.md — blank template
+  COMPONENT_NAME.md — blank template
   
   Copy this file to the directory of your component, rename to
   COMPONENT.md, and fill in the authored fields. The auto-generated
