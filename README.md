@@ -21,7 +21,11 @@ For every important component in a codebase, co-locate a small, structured docum
 The goal is not to replace source inspection. It is to give the agent a high-level navigation and impact map *first*, so it can identify the relevant slice of the codebase before spending context on the implementation.
 
 
-the software engineer asks ai to edit or maintenain COMPONENT_NAME Before ai even go to COMPONENT_NAME to modify it, ai first need to know which COMPONENTS ai are going to check after modifying it.
+the software engineer asks ai to edit or maintenain COMPONENT_NAME Before ai even go to COMPONENT_NAME to modify it, ai first need to know which COMPONENTS ai are going to check after modifying it. 
+
+## ( _NAME must be unique for each COMPONENT to prevent duplication in COMPONENT_NAME.md files. )
+
+## ( COMPONENT_NAME = the souce file of he COMPONENT and COMPONENT_NAME.md = the md file of the COMPONENT )
 
 This is the role of "COMPONENT_NAME.md". 
 
