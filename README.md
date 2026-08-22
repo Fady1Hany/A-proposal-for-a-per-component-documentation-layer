@@ -113,8 +113,8 @@ See [`COMPARISON.md`](./COMPARISON.md) for the full landscape.
 | [`COMPARISON.md`](./COMPARISON.md) | How it differs from AGENTS.md, Aider repo maps, MCP code-graph servers, ADRs, etc. |
 | [`ESTIMATES.md`](./ESTIMATES.md) | Realistic estimates of where this helps, with confidence levels |
 | [`SOURCES.md`](./SOURCES.md) | Honest audit of the evidence base — what's verified, what's vendor-cited, what's reasoning |
-| [`examples/authentication_service.COMPONENT.md`](./examples/authentication_service.COMPONENT.md) | A worked example |
-| [`examples/TEMPLATE.component.md`](./examples/TEMPLATE.component.md) | A blank template to copy |
+| [`examples/COMPONENT_authentication_service.md`](./examples/COMPONENT_authentication_service.md) | A worked example |
+| [`examples/COMPONENT_TEMPLATE.md`](./examples/COMPONENT_TEMPLATE.md) | A blank template to copy |
 | [`schema/component.schema.json`](./schema/component.schema.json) | JSON Schema for the format |
 | [`CONTRIBUTING.md`](./CONTRIBUTING.md) | How to contribute / discuss |
 | [`tools`](./tools) | all tools that are created to auto-generate the fields that can be auto generated will live under (./tools)|
