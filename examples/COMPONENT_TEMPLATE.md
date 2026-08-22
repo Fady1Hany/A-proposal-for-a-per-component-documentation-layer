@@ -2,8 +2,9 @@
   COMPONENT_TEMPLATE.md — blank template
   
   Copy this file to the directory of your component, rename to
-  COMPONENT_TEMPLATE.md, and fill in the authored fields. The auto-generated
-  fields should be filled by a generator tool, not by hand.
+  COMPONENT_<component_name>.md (e.g., COMPONENT_authentication_service.md),
+  and fill in the authored fields. The auto-generated fields should be filled
+  by a generator tool, not by hand.
 -->
 
 # COMPONENT_TEMPLATE: <ComponentName>
