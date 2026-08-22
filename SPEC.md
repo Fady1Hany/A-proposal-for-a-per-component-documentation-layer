@@ -8,18 +8,18 @@
 
 ## 1. Purpose
 
-`COMPONENT.md` is a small, structured documentation file co-located with a source component, designed to be read by AI coding agents. It gives the agent the minimum information it needs to navigate, predict impact, and verify changes for that component — without reading the whole codebase.
+`COMPONENT_NAME.md` is a small, structured documentation file co-located with a source component, designed to be read by AI coding agents. It gives the agent the minimum information it needs to navigate, predict impact, and verify changes for that component — without reading the whole codebase.
 
 ## 2. File placement
 
-- One `COMPONENT.md` per component.
+- One `COMPONENT_NAME.md` per component.
 - Placed **in the same directory** as the component's primary source file.
-- Named `COMPONENT.md` (uppercase, to distinguish from human-oriented `.md` files).
+- Named `COMPONENT_NAME.md` (uppercase, to distinguish from human-oriented `.md` files).
 - A component is defined as "a unit of code with a public interface that other components depend on" — typically a class, a module, or a small cohesive group of files.
 
 Try to make the definition of a component as small as possible.
 
-Why? For example, if you define a component as an entire microservice, and you change a function inside that microservice, that function may be connected to several other functions. The AI may not know that those relationships exist because the "COMPONENT.md" file is defined at the microservice level rather than at the function level. As a result, it will not be able to test the change properly.
+Why? For example, if you define a component as an entire microservice, and you change a function inside that microservice, that function may be connected to several other functions. The AI may not know that those relationships exist because the "COMPONENT_NAME.md" file is defined at the microservice level rather than at the function level. As a result, it will not be able to test the change properly.
 
 So, as much as possible, make the definition of a component as small and precise as possible. This allows the AI to identify and test all the relevant relationships whenever a change is made, and therefore verify whether the change actually works without breaking anything else.
 
@@ -36,7 +36,7 @@ This keeps the amount of code the AI needs to understand small, while still allo
 
 ## 3. Required fields
 
-Every `COMPONENT.md` MUST contain the following fields, in this order:
+Every `COMPONENT_NAME.md` MUST contain the following fields, in this order:
 
 ### 3.1 `component`
 The component's name as it appears in code.
@@ -85,7 +85,7 @@ Authored. Lists the specific tests or checks to run after modifying this compone
 
 ## 7. Agent consumption contract
 
-An AI agent reading a `COMPONENT.md` SHOULD:
+An AI agent reading a `COMPONENT_NAME.md` SHOULD:
 
 1. Read `verified_against` first.
 2. Compare the component file's current commit to `verified_against`.
