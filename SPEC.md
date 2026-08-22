@@ -73,7 +73,7 @@ Authored. Lists the specific tests or checks to run after modifying this compone
 ## 5. Format
 
 - Markdown, with a fixed field layout (see template).
-- A JSON Schema is provided in [`schema/component.schema.json`](./schema/component.schema.json) for tooling.
+- A JSON Schema is provided in [`schema/COMPONENT_NAME.schema.json`](./schema/COMPONENT_NAME.schema.json) for tooling.
 - The on-disk format is Markdown-first; tooling may parse it into structured form.
 
 ## 6. Maintenance rules
