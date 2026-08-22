@@ -1,5 +1,5 @@
 <!--
-  COMPONENT.md — worked example
+  COMPONENT_NAME.md — worked example
   
   This is what a real COMPONENT.md looks like for a hypothetical
   AuthenticationService. It is illustrative — file paths and test
@@ -9,7 +9,7 @@
   Fields marked [authored] are maintained by humans.
 -->
 
-# Component: AuthenticationService
+# Component: authentication_service
 
 ## location
 <!-- [auto] -->
