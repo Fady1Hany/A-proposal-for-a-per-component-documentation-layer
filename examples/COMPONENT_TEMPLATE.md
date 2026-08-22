@@ -1,12 +1,12 @@
 <!--
-  COMPONENT_NAME.md — blank template
+  COMPONENT_TEMPLATE.md — blank template
   
   Copy this file to the directory of your component, rename to
-  COMPONENT.md, and fill in the authored fields. The auto-generated
+  COMPONENT_TEMPLATE.md, and fill in the authored fields. The auto-generated
   fields should be filled by a generator tool, not by hand.
 -->
 
-# COMPONENT_NAME: <ComponentName>
+# COMPONENT_TEMPLATE: <ComponentName>
 
 ## location
 <!-- [auto] -->
