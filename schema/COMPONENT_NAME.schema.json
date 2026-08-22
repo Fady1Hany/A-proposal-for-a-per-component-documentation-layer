@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/<owner>/ai-component-docs/schema/COMPONENT_NAME.schema.json",
+  "$id": "https://github.com/Fady1Hany/A-proposal-for-a-per-component-documentation-layer/blob/main/schema/COMPONENT_NAME.schema.json",
   "title": "COMPONENT_NAME.md",
   "description": "Schema for the structured representation of a COMPONENT_NAME.md file. The on-disk format is Markdown; this schema is for tooling that parses it into structured form.",
   "type": "object",
